@@ -4,6 +4,12 @@ import { env } from './config/env.js';
 const app = createApp();
 
 app.listen(env.port, () => {
-    console.log(`🚀 API running on http://localhost:${env.port} (${env.nodeEnv})`);
-    console.log(`📊 Swagger: http://localhost:${env.port}/api-docs (${env.nodeEnv})`);
+    if (env.nodeEnv === 'development') {
+        console.log(`🚀 API running on http://localhost:${env.port} (${env.nodeEnv} environment)`);
+        console.log(`📊 Swagger: http://localhost:${env.port}/api-docs (${env.nodeEnv} environment)`);
+    } else {
+        console.log(`🚀 API running. (${env.nodeEnv} environment)`);
+        console.log(`📊 Swagger in path /api-docs (${env.nodeEnv} environment)`);
+    }
+
 });
