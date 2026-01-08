@@ -5,7 +5,7 @@ info:
   description: API BFF/Proxy para chatbot con JWT + seguridad completa
 
 servers:
-  - url: http://localhost:3001
+  - url: /
     description: Development
 
 components:
