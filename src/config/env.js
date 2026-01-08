@@ -17,4 +17,5 @@ export const env = {
     jwtSecret: process.env.JWT_SECRET,
     jwtExpiresIn: process.env.JWT_EXPIRES_IN || '1h',
     demoApiKey: process.env.DEMO_API_KEY,
+    userId: process.env.USER_ID || 'chat-service-user',
 };

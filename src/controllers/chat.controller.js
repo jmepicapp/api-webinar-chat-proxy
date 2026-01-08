@@ -11,8 +11,7 @@ export async function postChat(req, res, next) {
         }
 
         const result = await handleUserMessage({
-            message: req.body.message,
-            userId: req.user?.sub || req.body.userId,
+            message: req.body.message
         });
 
         res.json({
